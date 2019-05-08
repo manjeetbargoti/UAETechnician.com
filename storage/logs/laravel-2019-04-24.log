@@ -1,0 +1,419 @@
+[2019-04-24 06:22:03] local.ERROR: include(D:\GIT_Code\IndiaPropertyClinic\vendor\composer/../cviebrock/eloquent-sluggable/src/ServiceProvider.php): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\composer/../cviebrock/eloquent-sluggable/src/ServiceProvider.php): failed to open stream: No such file or directory at D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\composer\\ClassLoader.php:444)
+[stacktrace]
+#0 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\composer\\ClassLoader.php(444): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(D:\\\\GIT_...', 'D:\\\\GIT_Code\\\\Ind...', 444, Array)
+#1 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\composer\\ClassLoader.php(444): include()
+#2 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('D:\\\\GIT_Code\\\\Ind...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Cviebrock\\\\Eloqu...')
+#4 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(660): spl_autoload_call('Cviebrock\\\\Eloqu...')
+#5 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(594): Illuminate\\Foundation\\Application->resolveProvider('Cviebrock\\\\Eloqu...')
+#6 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('Cviebrock\\\\Eloqu...')
+#7 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(574): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#8 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#9 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#10 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(311): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#11 D:\\GIT_Code\\IndiaPropertyClinic\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(120): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#12 D:\\GIT_Code\\IndiaPropertyClinic\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#13 {main}
+"} 
+[2019-04-24 07:11:34] local.ERROR: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from `properties` order by `id` asc) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from `properties` order by `id` asc) at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 1045): SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70)
+[stacktrace]
+#0 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2124): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2112): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2598): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2113): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(519): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(503): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 /home/gqufoc2n7p3n/public_html/property.devirvine.com/app/Http/Controllers/HomeController.php(45): Illuminate\\Database\\Eloquent\\Builder->get()
+#9 [internal function]: App\\Http\\Controllers\\HomeController->index()
+#10 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#11 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('index', Array)
+#12 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\HomeController), 'index')
+#13 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#14 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Route->run()
+#15 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(75): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#58 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#59 /home/gqufoc2n7p3n/public_html/property.devirvine.com/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#60 {main}
+"} 
+[2019-04-24 07:14:53] production.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin_property.properties' doesn't exist (SQL: select * from `properties` order by `id` asc) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin_property.properties' doesn't exist (SQL: select * from `properties` order by `id` asc) at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'admin_property.properties' doesn't exist at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:326)
+[stacktrace]
+#0 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from `...', Array, Object(Closure))
+#1 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select * from `...', Array, Object(Closure))
+#2 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2124): Illuminate\\Database\\Connection->select('select * from `...', Array, true)
+#3 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2112): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2598): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2113): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(519): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(503): Illuminate\\Database\\Eloquent\\Builder->getModels(Array)
+#8 /home/gqufoc2n7p3n/public_html/property.devirvine.com/app/Http/Controllers/HomeController.php(45): Illuminate\\Database\\Eloquent\\Builder->get()
+#9 [internal function]: App\\Http\\Controllers\\HomeController->index()
+#10 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#11 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('index', Array)
+#12 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\HomeController), 'index')
+#13 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#14 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Route->run()
+#15 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#16 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#19 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(75): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#30 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#36 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#37 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#38 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#39 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#40 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#58 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#59 /home/gqufoc2n7p3n/public_html/property.devirvine.com/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#60 {main}
+"} 
+[2019-04-24 12:56:34] production.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Williammattson@gmail.com' for key 'users_email_unique' (SQL: insert into `users` (`first_name`, `last_name`, `email`, `country`, `state`, `city`, `phonecode`, `phone`, `password`, `usertype`, `servicetypeid`, `updated_at`, `created_at`) values (William Mattson Construction, carpenter, Williammattson@gmail.com, 233, 3852, 33649, 1, (763) 441-4788, $2y$10$9Md6/YEOhzyrzMBg7XdBsOOh7nfDzrgFWf48jVCuKq5EJbCkt2vpC, V, 5, 2019-04-24 12:56:34, 2019-04-24 12:56:34)) {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Williammattson@gmail.com' for key 'users_email_unique' (SQL: insert into `users` (`first_name`, `last_name`, `email`, `country`, `state`, `city`, `phonecode`, `phone`, `password`, `usertype`, `servicetypeid`, `updated_at`, `created_at`) values (William Mattson Construction, carpenter, Williammattson@gmail.com, 233, 3852, 33649, 1, (763) 441-4788, $2y$10$9Md6/YEOhzyrzMBg7XdBsOOh7nfDzrgFWf48jVCuKq5EJbCkt2vpC, V, 5, 2019-04-24 12:56:34, 2019-04-24 12:56:34)) at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Williammattson@gmail.com' for key 'users_email_unique' at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
+#1 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
+#2 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `us...', Array)
+#3 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `us...', Array)
+#4 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2657): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `us...', Array, 'id')
+#5 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1347): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(835): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(800): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(663): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 /home/gqufoc2n7p3n/public_html/property.devirvine.com/app/Http/Controllers/AdminController.php(124): Illuminate\\Database\\Eloquent\\Model->save()
+#10 [internal function]: App\\Http\\Controllers\\AdminController->addUser(Object(Illuminate\\Http\\Request))
+#11 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#12 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('addUser', Array)
+#13 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\AdminController), 'addUser')
+#14 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#15 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Route->run()
+#16 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#17 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#18 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#20 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(43): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#22 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(75): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#40 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#41 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#42 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#43 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#44 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#58 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#62 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#63 /home/gqufoc2n7p3n/public_html/property.devirvine.com/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#64 {main}
+"} 
+[2019-04-24 13:47:33] production.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'property_price' cannot be null (SQL: insert into `properties` (`property_name`, `property_url`, `property_type_id`, `property_code`, `property_price`, `booking_price`, `description`, `featured`, `map_pass`, `open_sides`, `parea`, `widthroad`, `furnish_type`, `floorno`, `total_floors`, `apple_trees`, `pfacing`, `transaction_type`, `construction_status`, `bedrooms`, `bathrooms`, `balconies`, `p_washrooms`, `cafeteria`, `road_facing`, `c_shop`, `wall_made`, `p_showroom`, `property_age`, `plotno`, `address1`, `address2`, `locality`, `country`, `state`, `city`, `zipcode`, `add_by`, `service_id`, `builder`, `updated_at`, `created_at`) values (Apartment for Rent in Kamoon, apartment-for-rent-in-kamoon, 1004, IPC9264910, , AED 100000, <div class="facts">
+<div class="facts__container">
+<div class="facts__list">
+<div class="facts__list-item">
+<div class="facts__label">Premium living accommodations -Keys with USA. This charming one sleeping room living accommodations is fabulously given within the heart of the city downtown space. Bright and spacious with an oversized living space, fantastic views from its modest balcony and a well equipped trendy room, this is often a chance for the fashionable skilled to measure in Dubai's premier community at a reasonable value.</div>
+<div class="facts__content facts__content--price">
+<div data-qs="PropertyPagePriceComponent">
+<div class="facts__price">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="facts__list-item">
+<div class="facts__label">Type Apartment</div>
+</div>
+<div class="facts__list-item">
+<div class="facts__label">Reference</div>
+<div class="facts__content">PPL-R-4184</div>
+</div>
+<div class="facts__list-item">
+<div class="facts__label facts__label-info-area">Trakheesi Permit
+<div class="facts__label-info">0076536882</div>
+</div>
+</div>
+<div class="facts__list-item">&nbsp;</div>
+<div class="facts__list-item">
+<div class="facts__content">&nbsp;</div>
+<div class="facts__content">AMENITIES</div>
+</div>
+</div>
+</div>
+</div>
+<div class="amenities">
+<div class="amenities__container">
+<div class="amenities__list">
+<div class="amenities__list-item">
+<div class="amenities__content">Balcony</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Central A/C</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Concierge</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Covered Parking</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Kitchen Appliances</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Maid Service</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Pets Allowed</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Security</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Shared Gym</div>
+</div>
+<div class="amenities__list-item">
+<div class="amenities__content">Shared Pool</div>
+</div>
+</div>
+</div>
+</div>, 0, , , 912, , S, , , , , New Booking, , 1, 2, 1, , , , , , , 1, , , , Kamoon, 231, 3705, 47987, , 1, 3, 3557, 2019-04-24 13:47:33, 2019-04-24 13:47:33)) {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'property_price' cannot be null (SQL: insert into `properties` (`property_name`, `property_url`, `property_type_id`, `property_code`, `property_price`, `booking_price`, `description`, `featured`, `map_pass`, `open_sides`, `parea`, `widthroad`, `furnish_type`, `floorno`, `total_floors`, `apple_trees`, `pfacing`, `transaction_type`, `construction_status`, `bedrooms`, `bathrooms`, `balconies`, `p_washrooms`, `cafeteria`, `road_facing`, `c_shop`, `wall_made`, `p_showroom`, `property_age`, `plotno`, `address1`, `address2`, `locality`, `country`, `state`, `city`, `zipcode`, `add_by`, `service_id`, `builder`, `updated_at`, `created_at`) values (Apartment for Rent in Kamoon, apartment-for-rent-in-kamoon, 1004, IPC9264910, , AED 100000, <div class=\"facts\">
+<div class=\"facts__container\">
+<div class=\"facts__list\">
+<div class=\"facts__list-item\">
+<div class=\"facts__label\">Premium living accommodations -Keys with USA. This charming one sleeping room living accommodations is fabulously given within the heart of the city downtown space. Bright and spacious with an oversized living space, fantastic views from its modest balcony and a well equipped trendy room, this is often a chance for the fashionable skilled to measure in Dubai's premier community at a reasonable value.</div>
+<div class=\"facts__content facts__content--price\">
+<div data-qs=\"PropertyPagePriceComponent\">
+<div class=\"facts__price\">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class=\"facts__list-item\">
+<div class=\"facts__label\">Type Apartment</div>
+</div>
+<div class=\"facts__list-item\">
+<div class=\"facts__label\">Reference</div>
+<div class=\"facts__content\">PPL-R-4184</div>
+</div>
+<div class=\"facts__list-item\">
+<div class=\"facts__label facts__label-info-area\">Trakheesi Permit
+<div class=\"facts__label-info\">0076536882</div>
+</div>
+</div>
+<div class=\"facts__list-item\">&nbsp;</div>
+<div class=\"facts__list-item\">
+<div class=\"facts__content\">&nbsp;</div>
+<div class=\"facts__content\">AMENITIES</div>
+</div>
+</div>
+</div>
+</div>
+<div class=\"amenities\">
+<div class=\"amenities__container\">
+<div class=\"amenities__list\">
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Balcony</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Central A/C</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Concierge</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Covered Parking</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Kitchen Appliances</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Maid Service</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Pets Allowed</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Security</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Shared Gym</div>
+</div>
+<div class=\"amenities__list-item\">
+<div class=\"amenities__content\">Shared Pool</div>
+</div>
+</div>
+</div>
+</div>, 0, , , 912, , S, , , , , New Booking, , 1, 2, 1, , , , , , , 1, , , , Kamoon, 231, 3705, 47987, , 1, 3, 3557, 2019-04-24 13:47:33, 2019-04-24 13:47:33)) at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'property_price' cannot be null at /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `pr...', Array, Object(Closure))
+#1 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('insert into `pr...', Array, Object(Closure))
+#2 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `pr...', Array)
+#3 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\\Database\\Connection->insert('insert into `pr...', Array)
+#4 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2657): Illuminate\\Database\\Query\\Processors\\Processor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into `pr...', Array, 'id')
+#5 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1347): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(835): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(800): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(663): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(793): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Support/helpers.php(1123): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\Property))
+#11 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(794): tap(Object(App\\Property), Object(Closure))
+#12 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#13 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1614): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#14 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1626): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#15 /home/gqufoc2n7p3n/public_html/property.devirvine.com/app/Http/Controllers/PropertyController.php(121): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#16 [internal function]: App\\Http\\Controllers\\PropertyController->addProperty(Object(Illuminate\\Http\\Request))
+#17 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#18 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('addProperty', Array)
+#19 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\PropertyController), 'addProperty')
+#20 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Route.php(176): Illuminate\\Routing\\Route->runController()
+#21 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(680): Illuminate\\Routing\\Route->run()
+#22 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Auth/Middleware/Authenticate.php(43): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Auth\\Middleware\\Authenticate->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#28 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#29 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(75): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\View\\Middleware\\ShareErrorsFromSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(56): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Session\\Middleware\\StartSession->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(66): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Cookie\\Middleware\\EncryptCookies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(682): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#46 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(657): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#47 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(623): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#48 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Router.php(612): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#49 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#50 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/fideloper/proxy/src/TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#53 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#54 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#55 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#56 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#57 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#58 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#59 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#60 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#61 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#62 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#63 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#64 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#65 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#66 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#67 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#68 /home/gqufoc2n7p3n/public_html/property.devirvine.com/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#69 /home/gqufoc2n7p3n/public_html/property.devirvine.com/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#70 {main}
+"} 

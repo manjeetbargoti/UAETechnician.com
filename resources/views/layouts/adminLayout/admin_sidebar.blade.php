@@ -47,14 +47,14 @@
           </ul>
         </li>
         <li class="treeview">
-          <a href="#"><i class="fa fa-gears"></i> <span>Services</span>
+          <a href="#"><i class="fa fa-gears"></i> <span>Category</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ url('/admin/services') }}"><i class="fa fa-circle-o text-red"></i>View Services</a></li>
-            <li><a href="{{ url('/admin/add-new-service') }}"><i class="fa fa-circle-o text-red"></i>Add Services</a></li>
+            <li><a href="{{ url('/admin/services') }}"><i class="fa fa-circle-o text-red"></i>View Category</a></li>
+            <li><a href="{{ url('/admin/add-new-service') }}"><i class="fa fa-circle-o text-red"></i>Add Category</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -65,7 +65,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ url('/admin/properties') }}"><i class="fa fa-circle-o text-purple"></i>All Post</a></li>
-            <li><a href="{{ url('/admin/add-new-property') }}"><i class="fa fa-circle-o text-purple"></i>Add New Post</a></li>
+            <li><a href="{{ url('/admin/add-new-post') }}"><i class="fa fa-circle-o text-purple"></i>Add New Post</a></li>
           </ul>
         </li>
 
@@ -76,8 +76,8 @@
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>All Pages</a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i>Add New Pages</a></li>
+            <li><a href="{{ url('/admin/pages') }}"><i class="fa fa-circle-o text-aqua"></i>All Pages</a></li>
+            <li><a href="{{ url('/admin/add-new-page') }}"><i class="fa fa-circle-o text-aqua"></i>Add New Pages</a></li>
           </ul>
         </li>
         <li class="treeview">

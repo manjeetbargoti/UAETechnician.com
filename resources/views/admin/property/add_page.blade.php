@@ -30,10 +30,10 @@ function generate_string($input, $strength = 16) {
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Add New Post</h1>
+        <h1>Add New Page</h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Add Post</li>
+            <li class="active">Add Page</li>
         </ol>
     </section>
 
@@ -65,7 +65,7 @@ function generate_string($input, $strength = 16) {
                                        
                                         <div class="col-xs-12 col-md-6">
                                             <div class="form-group">
-                                                <label for="Property Name">Post Title</label>
+                                                <label for="Property Name">Page Title</label>
                                                 <input type="text" name="property_name" id="property_name" class="form-control">
                                             </div>
                                         </div>
@@ -97,7 +97,7 @@ function generate_string($input, $strength = 16) {
                                 </div> <!-- Rows -->
                                 <div class="property_images col-sm-12 col-md-12">
                                     <div class="property_heading">
-                                        <h4><strong>Post Images</strong></h4>
+                                        <h4><strong>banner Images</strong></h4>
                                     </div>
                                     <div class="form-group">
                                         <!-- <label for="Property Images">Add Images</label> -->

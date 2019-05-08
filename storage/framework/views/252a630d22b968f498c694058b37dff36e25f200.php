@@ -78,7 +78,7 @@
                 <?php $__currentLoopData = $property; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <?php $counter++ ; ?>
                 <?php if( $counter <= 4): ?>
-                <li class="item">
+                <!-- <li class="item">
                   <div class="product-img"><span class="label label-info"><?php echo e(date('d M, Y', strtotime($p->created_at))); ?> </span>
                     <img style="width: 67px !important;" class="img-responsive" src="<?php echo e(asset('/images/backend_images/property_images/large/'.$p->image_name)); ?>" alt="<?php echo e($p->property_name); ?>">
                   </div>
@@ -88,7 +88,7 @@
                     <span class="label label-success pull-right">₹ <?php echo e($p->property_price); ?></span>
                     <span class="product-description"><?php echo e(strip_tags(str_limit($p->description, $limit=100))); ?></span>
                   </div>
-                </li>
+                </li> -->
                 <?php endif; ?>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 <!-- /.item -->

@@ -24,8 +24,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::match(['get', 'post'], '/admin/update-pwd', 'AdminController@updatePassword');
 
     // Admin Property Module (Add/Update/View/Delete)
-    Route::match(['get', 'post'], '/admin/add-new-property', 'PropertyController@addProperty');
+    Route::match(['get', 'post'], '/admin/add-new-post', 'PropertyController@addProperty');
+    Route::match(['get', 'post'], '/admin/add-new-page', 'PropertyController@addPage');
     Route::get('/admin/properties', 'PropertyController@viewProperty');
+    //Route::get('/admin/pages', 'PropertyController@viewPage');
     Route::match(['get', 'post'], '/admin/edit-property/{id}', 'PropertyController@editProperty');
     Route::match(['get', 'post'], '/add-new-property/check_slug', 'PropertyController@checkSlug');
     Route::match(['get', 'post'], '/admin/delete-property/{id}', 'PropertyController@deleteProperty');

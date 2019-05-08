@@ -1,5 +1,4 @@
-@extends('layouts.adminLayout.admin_design')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <?php
  
@@ -30,10 +29,10 @@ function generate_string($input, $strength = 16) {
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-        <h1>Add New Post</h1>
+        <h1>Edit Post</h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active">Add Post</li>
+            <li class="active">Edit Property</li>
         </ol>
     </section>
 
@@ -41,32 +40,21 @@ function generate_string($input, $strength = 16) {
     <section class="content container-fluid">
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                @if(Session::has('flash_message_success'))
-                    <div class="alert alert-success alert-dismissible">
-                        <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
-                        <strong>{!! session('flash_message_success') !!}</strong>
-                    </div>
-                @endif
-                @if(Session::has('flash_message_error'))
-                    <div class="alert alert-error alert-dismissible">
-                        <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
-                        <strong>{!! session('flash_message_error') !!}</strong>
-                    </div>
-                @endif
                 <div class="box box-purple">
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form enctype="multipart/form-data" method="post" action="{{ url('/admin/add-new-property') }}" name="add_property" id="add_property" novalidate="novalidate">
-                        {{ csrf_field() }}
+                        <form enctype="multipart/form-data" method="post" action="<?php echo e(url('/admin/edit-property/'.$properties->id)); ?>" name="edit_property" id="edit_property" novalidate="novalidate">
+                        <?php echo e(csrf_field()); ?>
+
                             <div class="col-sm-12 col-md-9">
                                 <div class="row">
                                     <div class="property_basic col-sm-12 col-md-12">
-                                        
-                                       
+                                    
+                                      
                                         <div class="col-xs-12 col-md-6">
                                             <div class="form-group">
-                                                <label for="Property Name">Post Title</label>
-                                                <input type="text" name="property_name" id="property_name" class="form-control">
+                                                <label for="Property Name">Post Name</label>
+                                                <input type="text" name="property_name" id="property_name" class="form-control" value="<?php echo e($properties->property_name); ?>">
                                             </div>
                                         </div>
                                         <div class="col-xs-12 col-md-6">
@@ -74,43 +62,45 @@ function generate_string($input, $strength = 16) {
                                                 <label for="Url">Url</label>
                                                 <div class="input-group">
                                                     <span class="input-group-addon">Url</span>
-                                                    <input type="text" name="slug" id="slug" class="form-control">
+                                                    <input type="text" name="slug" id="slug" class="form-control" value="<?php echo e($properties->property_url); ?>">
                                                 </div>
                                             </div>
                                         </div>
-                    
+            
                                     </div>
 
-                                      
-                                    </div>
+                                   
+
 
                                     <div class="property_address col-sm-12 col-md-12">
                                         
-                                        <div class="col-xs-12 col-sm-6 col-md-12">
+                                        <div class="col-xs-6 col-sm-12 col-md-12">
                                             <div class="form-group">
-                                                <label for="Property Address">Add content</label>
-                                                <textarea name="property_address1" id="property_address1" class="form-control" rows="25"></textarea>
+                                                <label for="Property Address">Add Content</label>
+                                                <textarea name="property_address1" id="property_address1" class="form-control" rows="25" placeholder="Address Line 1"><?php echo e($properties->address1); ?></textarea>
                                             </div>
                                         </div>
 
+                                    
                                     </div>
                                 </div> <!-- Rows -->
                                 <div class="property_images col-sm-12 col-md-12">
                                     <div class="property_heading">
-                                        <h4><strong>Post Images</strong></h4>
+                                        <h4><strong>Property Images</strong></h4>
                                     </div>
                                     <div class="form-group">
-                                        <!-- <label for="Property Images">Add Images</label> -->
-                                        <!-- <input type="file" id="property_images" name="property_images"> -->
-                                        <div class="add_image">
-                                            <input type="button" id="add_more" class="btn btn-info" value="add image"/>
-                                            <!-- <i class="fas fa-camera"></i> -->
-                                            </div>
-                                            <!-- <p class="help-block">Example block-level help text here.</p> -->
+                                        <?php $__currentLoopData = $propertyImage; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $propImages): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <input type="hidden" name="current_image[]" multiple id="image" value="<?php echo e($propImages->image_name); ?>">
+                                        <img width="150" style="padding: 0.5em 0.5em 0.5em 0;" src="<?php echo e(asset('/images/backend_images/property_images/large/'.$propImages->image_name)); ?>" alt="<?php echo e($propImages->property_name); ?>">
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </div>
                                 </div>
+                                <div class="box-footer">
+                                    <input type="submit" class="btn btn-success btn-md pull-right" value="Update Property">
+                                </div>
                             </div>
-                    
+                            
+                            
                         </form>
                     </div>
                     <!-- /.box-body -->
@@ -124,4 +114,6 @@ function generate_string($input, $strength = 16) {
 </div>
 <!-- ./wrapper -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.adminLayout.admin_design', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\uaetechnicianne\UAETechnician.com\resources\views/admin/property/edit_property.blade.php ENDPATH**/ ?>

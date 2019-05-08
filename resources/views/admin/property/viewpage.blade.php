@@ -5,10 +5,10 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>Listed Post</h1>
+      <h1>Listed Page</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active">View Post</li>
+        <li class="active">View Page</li>
       </ol>
     </section>
 
@@ -22,9 +22,9 @@
                         <table id="allusers-table" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                  <th>Post Id</th>
-                                  <th>Post Image</th>
-                                  <th>Post Title</th>
+                                  <th>Page Id</th>
+                                  <th>Page Image</th>
+                                  <th>Page Title</th>
                                   <th>Action</th>
                                 </tr>
                             </thead>
@@ -79,9 +79,9 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <th>Post Id</th>
-                                    <th>Post Image</th>
-                                    <th>Post Title</th>                               
+                                    <th>Page Id</th>
+                                    <th>Page Image</th>
+                                    <th>Page Title</th>                               
                                     <th>Action</th>
                                 </tr>
                             </tfoot>

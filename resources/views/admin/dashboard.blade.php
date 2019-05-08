@@ -79,7 +79,7 @@
                 @foreach($property as $p)
                 <?php $counter++ ; ?>
                 @if( $counter <= 4)
-                <li class="item">
+                <!-- <li class="item">
                   <div class="product-img"><span class="label label-info">{{ date('d M, Y', strtotime($p->created_at)) }} </span>
                     <img style="width: 67px !important;" class="img-responsive" src="{{ asset('/images/backend_images/property_images/large/'.$p->image_name)}}" alt="{{ $p->property_name }}">
                   </div>
@@ -88,7 +88,7 @@
                     <span class="label label-success pull-right">₹ {{ $p->property_price }}</span>
                     <span class="product-description">{{ strip_tags(str_limit($p->description, $limit=100)) }}</span>
                   </div>
-                </li>
+                </li> -->
                 @endif
                 @endforeach
                 <!-- /.item -->

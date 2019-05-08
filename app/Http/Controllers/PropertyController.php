@@ -24,6 +24,11 @@ class PropertyController extends Controller
     protected $posts_per_page = 12;
 
     // This is the function for Add New Property by Admin
+    public function addPage(Request $request)
+    {
+        return view('admin.property.add_page');
+    }
+
     public function addProperty(Request $request)
     {
         if ($request->isMethod('POST')) {
@@ -240,6 +245,7 @@ class PropertyController extends Controller
 
         return view('admin.property.view-property', compact('properties', 'propertyimage_count'));
         
+        
     }
 
     // View Single Property
@@ -419,64 +425,10 @@ class PropertyController extends Controller
         return view('frontend.filter_templates.filter_by_csc', compact('propertyImages', 'contRow', 'countryname', 'posts', 'countrycount'));
     }
 
-    public function searchByCity($city_id = null)
-    {
-        $cityname = DB::table('cities')->where(['id' => $city_id])->pluck('name');
-        $properties = Property::where(['city' => $city_id])->get();
-        $posts = Property::where(['city' => $city_id])->paginate($this->posts_per_page);
-        $propertyImages = PropertyImages::get();
-        $properties = json_decode(json_encode($properties));
-
-        foreach ($posts as $key => $val) {
-            $service_name = Services::where(['id' => $val->service_id])->first();
-            $posts[$key]->service_name = $service_name->service_name;
-            $propertyimage_name = PropertyImages::where(['property_id' => $val->id])->first();
-            $posts[$key]->image_name = $propertyimage_name->image_name;
-            $country_count = DB::table('countries')->where(['id' => $val->country])->count();
-            if ($country_count > 0) {
-                $country = DB::table('countries')->where(['id' => $val->country])->first();
-                $posts[$key]->country_name = $country->name;
-                $posts[$key]->currency = $country->currency;
-            }
-            $state_count = DB::table('states')->where(['id' => $val->state])->count();
-            if ($state_count > 0) {
-                $state = DB::table('states')->where(['id' => $val->state])->first();
-                $posts[$key]->state_name = $state->name;
-            }
-            $city_count = DB::table('cities')->where(['id' => $val->city])->count();
-            if ($city_count > 0) {
-                $city = DB::table('cities')->where(['id' => $val->city])->first();
-                $posts[$key]->city_name = $city->name;
-            }
-        }
-        if (!empty($country_count)) {
-            $countrycount = $country_count;
-        } else {
-            $countrycount = 0;
-        }
-        if (!empty($state_count)) {
-            $statecount = $state_count;
-        } else {
-            $statecount = 0;
-        }
-        if (!empty($city_count)) {
-            $citycount = $city_count;
-        } else {
-            $citycount = 0;
-        }
-
-        if (!empty($properties)) {
-            $contRow = count($properties);
-            // echo "<pre>"; print_r($contRow); die;
-        } else {
-            $contRow = 0;
-        }
-        return view('frontend.filter_templates.filter_by_csc')->with(compact('posts', 'propertyImages', 'contRow', 'cityname', 'countrycount', 'statecount', 'citycount'));
-    }
 
     // Search By Service
     public function searchByService($id = null)
-    {
+    {  
         $properties = Property::where(['service_id' => $id])->orderBy('created_at', 'desc')->get();
         $propertyImages = PropertyImages::get();
         $properties = json_decode(json_encode($properties));
@@ -581,13 +533,9 @@ class PropertyController extends Controller
 
             if(!empty($id)){
                 // Update Property Details
-                Property::where(['id'=>$id])->update(['property_name'=>$data['property_name'], 'property_url'=>$data['slug'], 'service_id'=>$data['property_for'], 'property_type_id'=>$data['property_type'], 'property_price'=>$data['property_price'], 'description'=>$data['description'], 'featured'=>$feature, 
-                'map_pass'=>$data['map_passed'], 'open_sides'=>$data['open_sides'], 'parea'=>$data['property_area'], 'widthroad'=>$data['width_road_facing'], 'furnish_type'=>$data['furnish_type'], 'floorno'=>$data['floor_no'], 'total_floors'=>$data['total_floors'], 'apple_trees'=>$data['trees'], 'transaction_type'=>$data['transection_type'], 'construction_status'=>$data['construction_status'],
-                'bedrooms'=>$data['bedrooms'], 'bathrooms'=>$data['bathrooms'], 'balconies'=>$data['balconies'], 'p_washrooms'=>$data['p_washroom'], 'cafeteria'=>$data['cafeteria'], 'road_facing'=>$data['roadfacing'], 'c_shop'=>$data['corner_shop'], 'wall_made'=>$data['boundrywall'], 'p_showroom'=>$data['pshowroom'], 'property_age'=>$data['property_age'],
-                'address1'=>$data['property_address1'], 'address2'=>$data['property_address2'], 'locality'=>$data['locality'], 'country'=>$data['country'], 'state'=>$data['state'], 'city'=>$data['city'], 'zipcode'=>$data['zipcode'], 'add_by'=>$add_by, 'builder'=>$data['builder'], 'agent'=>$data['agent']]);
-                // Update Amenities
-                Amenities::where(['property_id'=>$id])->update(['gym'=>$gym, 'club_house'=>$club_house, 'play_area'=>$play_area, 'water_supply'=>$water_supply, 'geyser'=>$geyser, 'visitor_arking'=>$visitor_arking, 'garden'=>$garden, 
-                'waste_disposal'=>$waste_disposal, 'power_backup'=>$power_backup, 'swimming_pool'=>$swimming_pool, 'water_storage'=>$water_storage, 'security_personnel'=>$security_personnel, 'gated_community'=>$gated_community]);
+                Property::where(['id'=>$id])->update(['property_name'=>$data['property_name'], 'property_url'=>$data['slug'], 
+                          'address1'=>$data['property_address1'], 'add_by'=>$add_by,]);
+            
                 // Update Images
                 PropertyImages::where(['property_id'=>$id])->update([]);
             }

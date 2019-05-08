@@ -1,5 +1,4 @@
-@extends('layouts.adminLayout.admin_design')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 <?php
  
@@ -41,23 +40,24 @@ function generate_string($input, $strength = 16) {
     <section class="content container-fluid">
         <div class="row">
             <div class="col-xs-12 col-md-12">
-                @if(Session::has('flash_message_success'))
+                <?php if(Session::has('flash_message_success')): ?>
                     <div class="alert alert-success alert-dismissible">
                         <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
-                        <strong>{!! session('flash_message_success') !!}</strong>
+                        <strong><?php echo session('flash_message_success'); ?></strong>
                     </div>
-                @endif
-                @if(Session::has('flash_message_error'))
+                <?php endif; ?>
+                <?php if(Session::has('flash_message_error')): ?>
                     <div class="alert alert-error alert-dismissible">
                         <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
-                        <strong>{!! session('flash_message_error') !!}</strong>
+                        <strong><?php echo session('flash_message_error'); ?></strong>
                     </div>
-                @endif
+                <?php endif; ?>
                 <div class="box box-purple">
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form enctype="multipart/form-data" method="post" action="{{ url('/admin/add-new-property') }}" name="add_property" id="add_property" novalidate="novalidate">
-                        {{ csrf_field() }}
+                        <form enctype="multipart/form-data" method="post" action="<?php echo e(url('/admin/add-new-property')); ?>" name="add_property" id="add_property" novalidate="novalidate">
+                        <?php echo e(csrf_field()); ?>
+
                             <div class="col-sm-12 col-md-9">
                                 <div class="row">
                                     <div class="property_basic col-sm-12 col-md-12">
@@ -124,4 +124,6 @@ function generate_string($input, $strength = 16) {
 </div>
 <!-- ./wrapper -->
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.adminLayout.admin_design', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\uaetechnicianne\UAETechnician.com\resources\views/admin/property/add-property.blade.php ENDPATH**/ ?>
